@@ -5,16 +5,15 @@ import cryptography from "./cryptography.png";
 import linkedin from "./linkedIn.png";
 import github from "./github.png";
 import React from "react";
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider, Input, Stack } from "@chakra-ui/react";
 import { ConnectButton, darkTheme } from "@rainbow-me/rainbowkit";
 import {
   //
   Flex,
-  //Text,
+  Text,
   Image,
   //Link,
   useMediaQuery,
-  //Input,
   //Stack,
   //Container,
 } from "@chakra-ui/react";
@@ -79,6 +78,22 @@ function App() {
               width={isNotSmallerScreen ? "65%" : "89%"}
               height="auto"
             />
+          </Flex>
+          <Flex background="yellow" align="center" p="10" direction="column">
+            <Stack
+              border="solid black"
+              p="5"
+              background=""
+              w={isNotSmallerScreen ? "40%" : "100%"}
+              borderRadius="18"
+            >
+              <Text color="black" fontSize="xl">
+                Tell us about your project:
+              </Text>
+              <Input placeholder="First Name" textColor="blue" />
+              <Input></Input>
+              <Input></Input>
+            </Stack>
           </Flex>
           <Flex background="yellow" justifyContent="center" pb="7">
             <Box>
