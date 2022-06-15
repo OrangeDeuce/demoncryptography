@@ -5,14 +5,14 @@ import cryptography from "./cryptography.png";
 import linkedin from "./linkedIn.png";
 import github from "./github.png";
 import React from "react";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider, Spacer } from "@chakra-ui/react";
 import { ConnectButton, darkTheme } from "@rainbow-me/rainbowkit";
 import {
   //
   Flex,
   //Text,
   Image,
-  //Link,
+  Link,
   useMediaQuery,
   //Input,
   //Stack,
@@ -81,20 +81,37 @@ function App() {
             />
           </Flex>
           <Flex background="yellow" justifyContent="center" pb="7">
-            <Image
-              src={linkedin}
-              pr="2"
-              width={isNotSmallerScreen ? "10%" : "25%"}
-              alt=""
-              height="auto"
-            />
-            <Image
-              src={github}
-              pl="2"
-              width={isNotSmallerScreen ? "10%" : "25%"}
-              alt=""
-              height="auto"
-            />
+            <Box>
+              <a
+                href="https://www.linkedin.com/in/orangedeuce/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={linkedin}
+                  pr="2"
+                  width={isNotSmallerScreen ? "25%" : "35%"}
+                  alt=""
+                  height="auto"
+                  float="right"
+                />
+              </a>
+            </Box>
+            <Box>
+              <a
+                href="https://github.com/OrangeDeuce"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={github}
+                  pl="2"
+                  width={isNotSmallerScreen ? "25%" : "35%"}
+                  alt=""
+                  height="auto"
+                />
+              </a>
+            </Box>
           </Flex>
         </ChakraProvider>
       </RainbowKitProvider>
