@@ -5,14 +5,14 @@ import cryptography from "./cryptography.png";
 import linkedin from "./linkedIn.png";
 import github from "./github.png";
 import React from "react";
-import { Box, ChakraProvider, Spacer } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import { ConnectButton, darkTheme } from "@rainbow-me/rainbowkit";
 import {
   //
   Flex,
   //Text,
   Image,
-  Link,
+  //Link,
   useMediaQuery,
   //Input,
   //Stack,
