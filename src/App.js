@@ -4,19 +4,37 @@ import demon from "./demon.png";
 import cryptography from "./cryptography.png";
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Image,
+  useMediaQuery,
+  Stack,
+  Container,
+} from "@chakra-ui/react";
 
 function App() {
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
     <ChakraProvider>
-      <nav background="yellow">
-        <h1>This is the nav bar</h1>
-      </nav>
+      <Flex background="yellow" color="black"></Flex>
       <div className="App">
-        <header className="App-header">
-          <img src={demon} alt="demon logo" />
-          <img src={logo} className="App-logo" alt="logo" />
-          <img src={cryptography} alt="cryptography logo" />
-        </header>
+        <Flex className="App-header">
+          <Image
+            src={demon}
+            alt="demon logo"
+            width={isNotSmallerScreen ? "25%" : "32%"}
+            height="auto"
+          />
+          <Image src={logo} className="App-logo" alt="logo" />
+          <Image
+            src={cryptography}
+            alt="cryptography logo"
+            width={isNotSmallerScreen ? "75%" : "75%"}
+            height="auto"
+          />
+        </Flex>
       </div>
     </ChakraProvider>
   );
