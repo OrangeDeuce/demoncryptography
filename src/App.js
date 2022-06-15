@@ -51,7 +51,7 @@ function App() {
         })}
       >
         <ChakraProvider>
-          <Flex background="yellow" color="black" p="5">
+          <Flex background="yellow" color="black" p="5" justifyContent="right">
             <ConnectButton
               label="Connect"
               accountStatus={{
@@ -65,14 +65,14 @@ function App() {
               <Image
                 src={demon}
                 alt="demon logo"
-                width={isNotSmallerScreen ? "25%" : "32%"}
+                width={isNotSmallerScreen ? "25%" : "34%"}
                 height="auto"
               />
               <Image src={logo} className="App-logo" alt="logo" />
               <Image
                 src={cryptography}
                 alt="cryptography logo"
-                width={isNotSmallerScreen ? "85%" : "75%"}
+                width={isNotSmallerScreen ? "65%" : "75%"}
                 height="auto"
               />
             </Flex>
