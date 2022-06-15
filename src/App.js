@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={demon} />
+        <img src={demon} alt="demon logo" />
         <img src={logo} className="App-logo" alt="logo" />
-        <img src={cryptography} />
+        <img src={cryptography} alt="cryptography logo" />
       </header>
     </div>
   );
