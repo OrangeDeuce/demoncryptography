@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import demon from "./demon.png";
 import cryptography from "./cryptography.png";
+import linkedin from "./linkedIn.png";
+import github from "./github.png";
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { ConnectButton, darkTheme } from "@rainbow-me/rainbowkit";
@@ -10,7 +12,9 @@ import {
   Flex,
   //Text,
   Image,
+  Link,
   useMediaQuery,
+  //Input,
   //Stack,
   //Container,
 } from "@chakra-ui/react";
@@ -60,23 +64,38 @@ function App() {
               }}
             />
           </Flex>
-          <div className="App">
-            <Flex className="App-header">
-              <Image
-                src={demon}
-                alt="demon logo"
-                width={isNotSmallerScreen ? "25%" : "34%"}
-                height="auto"
-              />
-              <Image src={logo} className="App-logo" alt="logo" />
-              <Image
-                src={cryptography}
-                alt="cryptography logo"
-                width={isNotSmallerScreen ? "65%" : "75%"}
-                height="auto"
-              />
-            </Flex>
-          </div>
+
+          <Flex className="App-header">
+            <Image
+              src={demon}
+              alt="demon logo"
+              width={isNotSmallerScreen ? "25%" : "40%"}
+              height="auto"
+            />
+            <Image src={logo} className="App-logo" alt="logo" />
+            <Image
+              src={cryptography}
+              alt="cryptography logo"
+              width={isNotSmallerScreen ? "65%" : "89%"}
+              height="auto"
+            />
+          </Flex>
+          <Flex background="yellow" justifyContent="center" pb="7">
+            <Image
+              src={linkedin}
+              pr="2"
+              width={isNotSmallerScreen ? "10%" : "25%"}
+              alt=""
+              height="auto"
+            />
+            <Image
+              src={github}
+              pl="2"
+              width={isNotSmallerScreen ? "10%" : "25%"}
+              alt=""
+              height="auto"
+            />
+          </Flex>
         </ChakraProvider>
       </RainbowKitProvider>
     </WagmiConfig>
