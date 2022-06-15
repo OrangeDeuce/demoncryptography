@@ -5,13 +5,13 @@ import cryptography from "./cryptography.png";
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import {
-  Box,
+  //
   Flex,
-  Text,
+  //Text,
   Image,
   useMediaQuery,
-  Stack,
-  Container,
+  //Stack,
+  //Container,
 } from "@chakra-ui/react";
 
 function App() {
