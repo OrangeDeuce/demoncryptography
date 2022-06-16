@@ -89,7 +89,9 @@ function App() {
               height="auto"
             />
           </Flex>
-          <h2 align="center">yeah, we use React</h2>
+          <h2 background="black" align="center">
+            yeah, we use React
+          </h2>
           <Flex align="center" p="10" direction="column" background="yellow">
             <Stack
               spacing={4}
@@ -116,8 +118,8 @@ function App() {
                 <Input type="Project URL" placeholder="Project URL" />
               </InputGroup>
               <InputGroup>
-                <InputLeftAddon children="+234" />
-                <Input type="tel" placeholder="Phone number" />
+                <InputLeftAddon children="abc" />
+                <Input type="email" placeholder="Email" />
               </InputGroup>
               <Textarea placeholder="Describe your web3 project" />
               <Button variant="solid">Submit</Button>
