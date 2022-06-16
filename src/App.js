@@ -4,6 +4,7 @@ import demon from "./demon.png";
 import cryptography from "./cryptography.png";
 import linkedin from "./linkedIn.png";
 import github from "./github.png";
+import qbs from "./qbs.png";
 import React from "react";
 import {
   Box,
@@ -122,6 +123,7 @@ function App() {
             </Stack>
           </Flex>
           <Box align="center" p="5" background="yellow">
+            <Image src={qbs} pb="5"></Image>
             <Text color="black" whiteSpace="normal">
               ⠄⠄⠄⠄⠄⠄⠄⢀⣠⣶⣾⣿⣶⣦⣤⣀⠄⢀⣀⣤⣤⣤⣤⣄⠄⠄⠄⠄⠄⠄ ⠄⠄⠄⠄⠄⢀⣴⣿⣿⣿⡿⠿⠿⠿⠿⢿⣷⡹⣿⣿⣿⣿⣿⣿⣷⠄⠄⠄⠄⠄
               ⠄⠄⠄⠄⠄⣾⣿⣿⣿⣯⣵⣾⣿⣿⡶⠦⠭⢁⠩⢭⣭⣵⣶⣶⡬⣄⣀⡀⠄⠄ ⠄⠄⠄⡀⠘⠻⣿⣿⣿⣿⡿⠟⠩⠶⠚⠻⠟⠳⢶⣮⢫⣥⠶⠒⠒⠒⠒⠆⠐⠒
