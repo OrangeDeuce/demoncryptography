@@ -5,7 +5,16 @@ import cryptography from "./cryptography.png";
 import linkedin from "./linkedIn.png";
 import github from "./github.png";
 import React from "react";
-import { Box, ChakraProvider, Input, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  ChakraProvider,
+  Input,
+  InputGroup,
+  InputLeftAddon,
+  Textarea,
+  Stack,
+  Button,
+} from "@chakra-ui/react";
 import { ConnectButton, darkTheme } from "@rainbow-me/rainbowkit";
 import {
   //
@@ -79,22 +88,51 @@ function App() {
               height="auto"
             />
           </Flex>
-          <Flex background="yellow" align="center" p="10" direction="column">
+          <Flex align="center" p="10" direction="column" background="yellow">
             <Stack
+              spacing={4}
               border="solid black"
+              borderWidth="thick"
               p="5"
-              background=""
               w={isNotSmallerScreen ? "40%" : "100%"}
               borderRadius="18"
+              background="#61DBFB"
             >
               <Text color="black" fontSize="xl">
                 Tell us about your project:
               </Text>
-              <Input placeholder="First Name" textColor="blue" />
-              <Input></Input>
-              <Input></Input>
+              <InputGroup>
+                <InputLeftAddon children="abc" />
+                <Input type="name" placeholder="Name" />
+              </InputGroup>
+              <InputGroup>
+                <InputLeftAddon children="+234" />
+                <Input type="tel" placeholder="Phone number" />
+              </InputGroup>
+              <InputGroup>
+                <InputLeftAddon children="https" />
+                <Input type="Project URL" placeholder="Project URL" />
+              </InputGroup>
+              <InputGroup>
+                <InputLeftAddon children="+234" />
+                <Input type="tel" placeholder="Phone number" />
+              </InputGroup>
+              <Textarea placeholder="Describe your web3 project" />
+              <Button variant="solid">Submit</Button>
             </Stack>
           </Flex>
+          <Box align="center" p="5" background="yellow">
+            <Text color="black" whiteSpace="normal">
+              ⠄⠄⠄⠄⠄⠄⠄⢀⣠⣶⣾⣿⣶⣦⣤⣀⠄⢀⣀⣤⣤⣤⣤⣄⠄⠄⠄⠄⠄⠄ ⠄⠄⠄⠄⠄⢀⣴⣿⣿⣿⡿⠿⠿⠿⠿⢿⣷⡹⣿⣿⣿⣿⣿⣿⣷⠄⠄⠄⠄⠄
+              ⠄⠄⠄⠄⠄⣾⣿⣿⣿⣯⣵⣾⣿⣿⡶⠦⠭⢁⠩⢭⣭⣵⣶⣶⡬⣄⣀⡀⠄⠄ ⠄⠄⠄⡀⠘⠻⣿⣿⣿⣿⡿⠟⠩⠶⠚⠻⠟⠳⢶⣮⢫⣥⠶⠒⠒⠒⠒⠆⠐⠒
+              ⠄⢠⣾⢇⣿⣿⣶⣦⢠⠰⡕⢤⠆⠄⠰⢠⢠⠄⠰⢠⠠⠄⡀⠄⢊⢯⠄⡅⠂⠄ ⢠⣿⣿⣿⣿⣿⣿⣿⣏⠘⢼⠬⠆⠄⢘⠨⢐⠄⢘⠈⣼⡄⠄⠄⡢⡲⠄⠂⠠⠄
+              ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣥⣀⡁⠄⠘⠘⠘⢀⣠⣾⣿⢿⣦⣁⠙⠃⠄⠃⠐⣀ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣋⣵⣾⣿⣿⣿⣿⣦⣀⣶⣾⣿⣿⡉⠉⠉
+              ⣿⣿⣿⣿⣿⣿⣿⠟⣫⣥⣬⣭⣛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠄ ⣿⣿⣿⣿⣿⣿⣿⠸⣿⣏⣙⠿⣿⣿⣶⣦⣍⣙⠿⠿⠿⠿⠿⠿⠿⠿⣛⣩⣶⠄
+              ⣛⣛⣛⠿⠿⣿⣿⣿⣮⣙⠿⢿⣶⣶⣭⣭⣛⣛⣛⣛⠛⠛⠻⣛⣛⣛⣛⣋⠁⢀ ⣿⣿⣿⣿⣿⣶⣬⢙⡻⠿⠿⣷⣤⣝⣛⣛⣛⣛⣛⣛⣛⣛⠛⠛⣛⣛⠛⣡⣴⣿
+              ⣛⣛⠛⠛⠛⣛⡑⡿⢻⢻⠲⢆⢹⣿⣿⣿⣿⣿⣿⠿⠿⠟⡴⢻⢋⠻⣟⠈⠿⠿ ⣿⡿⡿⣿⢷⢤⠄⡔⡘⣃⢃⢰⡦⡤⡤⢤⢤⢤⠒⠞⠳⢸⠃⡆⢸⠄⠟⠸⠛⢿
+              ⡟⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸
+            </Text>
+          </Box>
           <Flex background="yellow" justifyContent="center" pb="7">
             <Box>
               <a
