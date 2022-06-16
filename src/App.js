@@ -89,6 +89,7 @@ function App() {
               height="auto"
             />
           </Flex>
+          <h2 align="center">yeah, we use React</h2>
           <Flex align="center" p="10" direction="column" background="yellow">
             <Stack
               spacing={4}
